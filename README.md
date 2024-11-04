@@ -18,3 +18,8 @@ This is a parallax scrolling web design project I created for a school course, i
 1. 克隆仓库到本地 / Clone the repository:
    ```bash
    git clone https://github.com/Penguin1014w/Webpage-Project.git
+
+### 致谢 / Acknowledgments
+感谢 Mr-majifu 的 Parallax Scrolling Website 提供的代码，本项目参考了该项目的代码。
+Special thanks to Mr-majifu's Parallax Scrolling Website for the code, which served as a reference for this project.
+https://github.com/Mr-majifu/Parallax-Scrolling-Website
