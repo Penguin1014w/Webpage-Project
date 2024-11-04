@@ -1,0 +1,173 @@
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap'); */
+@import './google-fonts.css';
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(#272b5a,#000);
+    /* 上部背景色 */
+    overflow-x: hidden;;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000000;
+}
+
+header .kouyou {
+    color: #272b5a;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #272b5a;
+    border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    background: #272b5a;
+    color: #fff 
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #110a40, transparent);
+    /* 下部分半透明色 */
+    z-index: 1000;
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+section img#moon {
+    mix-blend-mode: screen;
+}
+
+section img#ufo {
+    /* z-index: 10; */
+    z-index: 10;
+    position: absolute;
+    /* left:0; */
+    /* width: 100%;
+    height:auto; */
+}
+
+#text{
+    position: absolute;
+    right: -350px;
+    color: #272b5a;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+}
+
+.sec {
+    position: relative;
+    padding: 100px;
+    /* 下部分背景色 */
+    background: #110a40;
+}
+
+.sec h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    /* 下部分タイトル色 */
+    color: #fffb70;
+}
+
+.sec p {
+    font-size: 1em;
+    color: #fff;
+}
+
+/* #video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 9999;
+    
+    
+} */
+footer{
+    position: relative;
+    background-color: #110a40; 
+    color: #fff;
+}
+
+.animated-footer {
+    position: absolute;
+    top: 125%;
+    right: 10%;
+    size: 20%;
+    width: 40%;
+    transform: scale(0.6);
+    height: 50vh; /* 50% of the viewport height */
+    overflow: hidden;
+    z-index: 999; /* Ensure it's above other elements if needed */
+}
+
+.animated-footer video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+

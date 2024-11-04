@@ -1,0 +1,152 @@
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap'); */
+@import './google-fonts.css';
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(#1d1d1d 20%, #4462b3 80%, #110a40 90%);
+    /* 上部背景色 */
+    overflow-x: hidden;;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 70px;
+    display: flex;
+    justify-content:right;
+    align-items:center;
+    z-index: 1000000;
+}
+
+header ul {
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header ul li {
+    text-align: right;
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a {
+    text-align: right;
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+
+
+
+header ul li a:hover,
+header ul li a.active {
+    background: #fffb70;
+    color: #272b5a;
+} 
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    overflow: hidden;
+}
+
+.content section.main h2 {
+    color: #fffb70;
+
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 6em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    /* mix mode*/
+    mix-blend-mode:exclusion;
+    /* テキストを隠す */
+    clip-path: polygon(0 0, 0 100%, 0% 100%, 0% 0%);
+    /* 動画 */
+    animation: drawText 1s ease-out forwards;
+}
+
+
+.content section.main p {
+    color: #fff;
+    font-size:1em;
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    /* mix-blend-mode:exclusion; */
+        /* テキストを隠す */
+        clip-path: polygon(0 0, 0 100%, 0% 100%, 0% 0%);
+        /* 動画 */
+        animation: drawText 1.5s ease-out forwards;
+}
+
+@keyframes drawText {
+    to {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+}
+
+
+.content section.pic {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.content section.pic img {
+    max-width: 40%;
+    height: auto;
+}
+
+.content section.star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    opacity: 0.8;
+    /* mix-blend-mode:exclusion; */
+    z-index: -1;
+}
+
+.content section.main::before {
+    content: '';
+    position: absolute;
+    top: -95%;
+    left: -30%;
+    width: 1000px; 
+    height: 1000px; 
+    background-color: #fffb70;
+    border-radius: 50%;
+}
+
+footer{
+    color: #fff;
+    opacity: 50%;
+}
+
